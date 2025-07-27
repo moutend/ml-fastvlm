@@ -260,21 +260,21 @@ private enum Vision {
     fileprivate class VisionModelCoreML {
 
         let lock = NSLock()
-        var _model: FastViTHD?
+        var _model: fastvithd?
 
         init() {
         }
 
-        func load() throws -> FastViTHD {
+        func load() throws -> fastvithd {
             try lock.withLock {
                 if let model = _model { return model }
-                let model = try FastViTHD()
+                let model = try fastvithd()
                 _model = model
                 return model
             }
         }
 
-        public func model() -> FastViTHD {
+        public func model() -> fastvithd {
             try! load()
         }
 
