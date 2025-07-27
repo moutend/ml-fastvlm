@@ -2,4 +2,4 @@
 
 set -xeuo pipefail
 
-./get_pretrained_mlx_model.sh --model 0.5b --dest app/FastVLM/model
+./get_pretrained_mlx_model.sh --model 0.5b --dest ./FastVLM/model
